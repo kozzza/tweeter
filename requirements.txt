@@ -1,0 +1,3 @@
+python-twitter
+python-decouple
+discord.py
