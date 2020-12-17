@@ -2,12 +2,13 @@ from discord.ext import commands
 import discord
 
 from manager import Manager
+from sql_query import SQLQuery, initialize_connection
 
 class Basic(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		self.manager = Manager()
-	
+
 	@commands.command(name='ping')
 	async def ping_command(self, ctx):
 		channel = ctx.channel
@@ -24,6 +25,6 @@ class Basic(commands.Cog):
 		embed = self.manager.create_embed('Help', 'Tweeter posts tweets in a designated Discord channel based on matching criteria.',
 		0x36cdff, f'attachment://help_thumbnail.png', help_field_names, help_field_values)
 		await channel.send(embed=embed)
-	
+
 def setup(bot):
 	bot.add_cog(Basic(bot))
