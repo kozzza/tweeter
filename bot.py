@@ -1,7 +1,6 @@
 from discord.ext import commands
 
 from decouple import config
-import os
 
 bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
