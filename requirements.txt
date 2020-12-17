@@ -3,3 +3,4 @@ python-decouple
 discord.py
 mysql-connector-python
 discord-webhook
+tweepy
