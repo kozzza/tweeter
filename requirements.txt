@@ -1,6 +1,6 @@
 python-twitter
 python-decouple
 discord.py
-mysql-connector-python
+mysql-connector==2.2.9
 discord-webhook
 tweepy
