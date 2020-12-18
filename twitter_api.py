@@ -19,9 +19,6 @@ class MyStreamListener(tweepy.StreamListener):
         self.keywords = []
 
     def on_status(self, tweet):
-        print(tweet.text, self.keywords)
-        print(tweet.user.id_str, self.account)
-        print(f'https://twitter.com/{tweet.user.screen_name}/status/{tweet.id_str}')
         matching_keywords = all([keyword in tweet.text.lower() for keyword in self.keywords[0].split(' ')]) if self.keywords[0] else True
         if (tweet.user.id_str in self.account or not self.account[0]) and matching_keywords:
             tweet_content = f'{tweet_base_url+str(tweet.id)}'
