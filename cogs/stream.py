@@ -30,8 +30,6 @@ class Stream(commands.Cog):
         for task in tasks:
             stream = Streamer(task[3], [task[0]])
             stream.set_filter([task[1]] if task[1] else None, task[2].split(',') if task[2] else None)
-            print("sleeping")
-            time.sleep(60)
             
         await self.bot.change_presence(activity=discord.Game(name=f"!help | {len(tasks)} tasks running"))
 
