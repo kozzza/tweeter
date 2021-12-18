@@ -1,6 +1,6 @@
-python-twitter
-python-decouple
-discord.py
+python-twitter==3.5
+python-decouple==3.5
+discord.py==1.7.3
 mysql-connector==2.2.9
-discord-webhook
-tweepy
+discord-webhook==0.14.0
+tweepy==3.10.0
